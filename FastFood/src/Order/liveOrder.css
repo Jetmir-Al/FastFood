@@ -1,0 +1,71 @@
+.liveOrders-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.liveOrders {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color100);
+}
+
+
+.liveOrders th,
+.liveOrders td {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.liveOrders th {
+    background-color: var(--color90);
+    color: var(--color10);
+    font: var(--h4);
+}
+
+.liveOrder-row:nth-child(even) {
+    background-color: var(--color95);
+}
+
+.liveOrder-row:hover {
+    background-color: var(--hover95);
+}
+
+
+.liveOrders td {
+    padding: 1rem 0.7rem;
+    text-align: center;
+    line-height: 12px;
+}
+
+.liveOrders button {
+    padding: 0.4rem 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+.liveOrders button:hover {
+    background-color: var(--color40);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .liveOrders td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .liveOrders th {
+        font: var(--h5);
+    }
+}

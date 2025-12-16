@@ -1,0 +1,93 @@
+.login-Container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80%;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: var(--color50);
+    box-shadow: var(--boxShadow);
+
+}
+
+.loginForm input,
+.role {
+    padding: 10px;
+    width: 60%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.displayBadinfo {
+    display: none;
+    font: var(--p);
+}
+
+#diqka {
+    color: red;
+}
+
+.loginForm input:focus,
+.role:focus {
+    border-bottom: 3px solid var(--color10);
+}
+
+.btn-conatiner {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-login {
+    padding: 0.6rem 2rem;
+    font: var(--p);
+    border: none;
+    color: var(--color10);
+    border: 2px solid var(--color30);
+    border-radius: 50px;
+    background-color: var(--color100);
+    transition: 0.5s;
+}
+
+.btn-login:hover {
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .loginForm {
+        width: 70%;
+    }
+
+    .loginForm input,
+    .role {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .loginForm,
+    .role {
+        width: 90%;
+    }
+
+    .loginForm input,
+    .role {
+        width: 85%;
+    }
+}

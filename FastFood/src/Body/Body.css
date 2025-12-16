@@ -1,0 +1,21 @@
+/* hero-container */
+.hero-container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 600px) {}

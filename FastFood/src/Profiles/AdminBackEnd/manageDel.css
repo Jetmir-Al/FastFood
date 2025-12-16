@@ -1,0 +1,30 @@
+.deliveryAdmin-container {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.updateBtn,
+.deleteBtn {
+    padding: 0.8rem 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deliveries-row {
+    line-height: 15px;
+}
+
+.deliveries-row:nth-child(even) {
+    background-color: var(--color95);
+}
+
+.deliveries-row:hover {
+    background-color: var(--hover95);
+}

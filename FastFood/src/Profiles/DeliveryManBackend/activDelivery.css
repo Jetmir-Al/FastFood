@@ -1,0 +1,58 @@
+.active-deliveries {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.activdelivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    width: 300px;
+    background-color: var(--color40);
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+
+}
+
+.activInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.activInfo button {
+    padding: 0.4rem 0.7rem;
+    margin-top: 5px;
+    align-self: center;
+    border: 2px solid var(--color30);
+    color: var(--color30);
+    border-radius: 20px;
+    background-color: var(--color95);
+    transition: 1s;
+}
+
+.activInfo button:hover {
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 600px) {}

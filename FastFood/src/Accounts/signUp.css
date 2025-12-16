@@ -1,0 +1,63 @@
+.signUp-Container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80%;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: var(--color50);
+    box-shadow: var(--boxShadow);
+
+}
+
+.signUpInput {
+    padding: 10px;
+    width: 60%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.displayBadInfo {
+    display: none;
+}
+
+#keq {
+    color: red;
+}
+
+.signUpInput:focus {
+    border-bottom: 3px solid var(--color10);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .signupForm {
+        width: 70%;
+    }
+
+    .signUpInput {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .signupForm {
+        width: 90%;
+    }
+
+    .signUpInput {
+        width: 85%;
+    }
+}

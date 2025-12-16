@@ -1,0 +1,41 @@
+.manageShortCuts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    color: var(--color10);
+}
+
+.manageShortCuts h3 {
+    font: var(--h2);
+    border-bottom: 3px solid var(--color10);
+}
+
+
+.shortCutIcon {
+    font: var(--h1);
+    padding: 0.5rem;
+    background-color: var(--color100);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .manageShortCuts h3 {
+        font: var(--h3);
+    }
+}
+
+/* admin@example.com */
+
+@media screen and (max-width: 600px) {
+    .manageShortCuts h3 {
+        font: var(--h4);
+    }
+
+    .shortCutIcon {
+        font: var(--h2);
+    }
+}

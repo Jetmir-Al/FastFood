@@ -1,0 +1,63 @@
+.dropDown-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+.dropDownIcon {
+    font: var(--h3);
+}
+
+
+.dropDown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 2;
+    top: 35px;
+    right: 10px;
+    width: 150px;
+    background-color: var(--color100);
+}
+
+.dropDown-Container:hover .dropDown {
+    display: flex;
+}
+
+.dropDown-Container:hover .dropDownIcon {
+    transition: 0.5s;
+    rotate: 90deg;
+}
+
+.dropDownItem {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color100);
+    color: var(--color30);
+    border: none;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.dropDown :first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.dropDown :last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropDownItem:hover {
+    background-color: var(--color90);
+}
+
+#dropDownAdmin,
+#dropDownAdminItem {
+    border-radius: 10px;
+}

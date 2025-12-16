@@ -1,0 +1,90 @@
+.order-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color80);
+    border-radius: 0px 0px 15px 15px;
+    gap: 10px;
+    padding: 2rem;
+    box-shadow: var(--boxShadow);
+
+}
+
+.orderHeader {
+    width: 40%;
+    padding: 1.5rem 2rem;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+
+.order input {
+    padding: 10px;
+    width: 100%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.orderItem {
+    padding: 10px;
+    width: 100%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.order input:focus,
+.order textarea:focus {
+    border-bottom: 3px solid var(--color10);
+}
+
+.order textarea {
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.orderLbl {
+    width: 100%;
+    font: var(--p);
+}
+
+.submitOrder {
+    color: green;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .order,
+    .orderHeader {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .order,
+    .orderHeader {
+        width: 90%;
+    }
+}

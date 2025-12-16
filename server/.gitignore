@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# TypeScript build output (if you compile to JS)
+dist/
+build/
+
+# Local environment variables
+.env
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor folders (optional)
+.vscode/
+.idea/
+.DS_Store
+
+
+database

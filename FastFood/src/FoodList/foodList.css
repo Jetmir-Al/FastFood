@@ -1,0 +1,140 @@
+.foodList-conatiner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 40px;
+}
+
+.foodList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 65%;
+    padding: 10px;
+}
+
+.foodListTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.food {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color40);
+}
+
+.food img {
+    width: 150px;
+    height: 130px;
+    background-color: var(--color90);
+    border-radius: 10px;
+}
+
+.addFoodItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    width: 40%;
+    border-radius: 0 0 15px 15px;
+    box-shadow: var(--boxShadow);
+    background-color: var(--color80);
+}
+
+.foodItemHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    padding: 1.5rem 2rem;
+    background-color: var(--color30);
+    color: var(--color100);
+    box-shadow: var(--boxShadow);
+    border-radius: 12px 12px 0 0;
+}
+
+.addBtn {
+    padding: 0.3rem 1.5rem;
+    background-color: var(--color100);
+    color: var(--color30);
+    border-radius: 20px;
+    border: 2px solid var(--color30);
+    transition: 1s;
+}
+
+.addBtn:hover {
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+.addFoodItem h2 {
+    text-align: center;
+    align-self: center;
+}
+
+.addFoodItem input {
+    padding: 10px;
+    width: 100%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.addFoodItem input:focus {
+    border-bottom: 3px solid var(--color10);
+}
+
+.addFoodItem :nth-child(4) {
+    border-bottom: 3px solid var(--color10);
+
+}
+
+.addFoodBtns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .foodList {
+        width: 80%;
+    }
+
+    .addFoodItem,
+    .foodItemHeader {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .foodList {
+        width: 95%;
+    }
+
+    .addFoodItem,
+    .foodItemHeader {
+        width: 90%;
+    }
+
+
+}

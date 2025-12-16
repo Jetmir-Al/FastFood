@@ -1,0 +1,47 @@
+.customer-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.custmoreInfo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 5px;
+    height: 65vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: var(--color100);
+}
+
+.custmoreInfo-container button {
+    align-self: flex-end;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--color10);
+    background-color: var(--color100);
+    border-radius: 3px;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .custmoreInfo-container {
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .custmoreInfo-container {
+        width: 85%;
+    }
+}

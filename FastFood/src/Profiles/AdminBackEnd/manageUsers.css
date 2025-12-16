@@ -1,0 +1,133 @@
+.manageUsers-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: var(--ff3);
+}
+
+.usersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 1.5rem 2rem;
+    background-color: var(--color30);
+    color: var(--color100);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--boxShadow);
+}
+
+.header-title {
+    font: var(--h3);
+}
+
+.add-button {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color100);
+    color: var(--color30);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: var(--color90);
+}
+
+.table-wrapper {
+    width: 80%;
+    /* over flow so nice */
+    overflow-x: auto;
+    background-color: var(--color100);
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--boxShadow);
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color100);
+}
+
+.usersTable th,
+.usersTable td {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.usersTable th {
+    background-color: var(--color90);
+    color: var(--color10);
+    font: var(--h3);
+}
+
+.user-row:nth-child(even) {
+    background-color: var(--color95);
+}
+
+.user-row:hover {
+    background-color: var(--hover95);
+}
+
+.tableBtns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.update-btn,
+.delete-btn {
+    padding: 0.4rem 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.update-btn {
+    background-color: var(--color30);
+    color: var(--color100);
+}
+
+.update-btn:hover {
+    background-color: var(--color40);
+    color: var(--color100);
+}
+
+.delete-btn {
+    background-color: var(--red);
+    color: var(--color100);
+}
+
+.delete-btn:hover {
+    background-color: var(--redHover);
+}
+
+.loading-container .loading-cell {
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+
+    .usersHeader,
+    .table-wrapper {
+        width: 90%;
+    }
+
+
+    .usersTable td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .usersTable th {
+        font: var(--h5);
+    }
+}

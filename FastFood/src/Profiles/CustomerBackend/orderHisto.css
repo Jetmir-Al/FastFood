@@ -1,0 +1,48 @@
+.orderHistory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card-Order {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 10px;
+    background-color: var(--color40);
+    position: relative;
+    height: 380px;
+    width: 300px;
+    border-radius: 15px;
+    font-family: var(--ff3);
+}
+
+.card-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.info-card h3 {
+    align-self: center;
+}
+
+.card-OrderStatus {
+    clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%);
+    width: fit-content;
+    background-color: var(--color30);
+    color: var(--color90);
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    position: absolute;
+    bottom: 340px;
+    left: 185px;
+    border-radius: 5px 0 0 5px;
+}

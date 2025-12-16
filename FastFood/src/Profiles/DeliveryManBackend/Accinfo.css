@@ -1,0 +1,117 @@
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 5px;
+    height: 65vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: var(--color100);
+    box-shadow: var(--boxShadow);
+}
+
+.updatePswBtn {
+    align-self: flex-end;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--color10);
+    background-color: var(--color100);
+    border-radius: 3px;
+}
+
+.updatePswBtn:hover {
+    background-color: var(--hover95);
+}
+
+.accInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 80%;
+}
+
+
+.accInfo-extra {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color10);
+    padding: 1rem;
+    gap: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.updatePsw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.inputPsw {
+    padding: 10px;
+    width: 100%;
+    font: var(--p);
+    border: none;
+    border-bottom: 3px dashed var(--color10);
+    outline: none;
+}
+
+.inputPsw:focus {
+    border-bottom: 3px solid var(--color10);
+}
+
+.accinfo-btns {
+    display: flex;
+    gap: 10px;
+}
+
+
+.accountManagment button,
+.accinfo-btns button {
+    padding: 0.7rem 1rem;
+    border: none;
+    background-color: var(--color50);
+    transition: 0.5s;
+}
+
+.accountManagment button:hover,
+.accinfo-btns button:hover {
+    background-color: var(--color80);
+}
+
+.accountManagment :last-child,
+.accinfo-btns :last-child {
+    background-color: var(--red);
+    color: var(--color100);
+}
+
+.accountManagment :last-child:hover,
+.accinfo-btns :last-child:hover {
+    background-color: var(--redHover);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .info-container {
+        width: 65%;
+    }
+
+    .accInfo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info-container {
+        width: 80%;
+    }
+}
