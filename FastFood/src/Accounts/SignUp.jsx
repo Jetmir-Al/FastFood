@@ -36,13 +36,25 @@ export const SignUp = () => {
             <form className='signupForm' onSubmit={signUp}>
                 <h1>Singup</h1>
                 <p id="keq" className={badInfo ? null : 'displayBadInfo'}>Make sure to fill each field correctly!</p>
-                <input className='signUpInput' type="text" placeholder='Name' required
-                    onChange={(e) => setName(e.target.value)} />
-                <input className='signUpInput' type="email" placeholder='Email' required
-                    onChange={(e) => setEmail(e.target.value)} />
-                <input className='signUpInput' type="password" placeholder='Password' required
-                    onChange={(e) => setPsw(e.target.value)} />
-                <input className='signUpInput' type="number" placeholder='Phone number' required onChange={(e) => setPhone(e.target.value)} />
+                <label>
+                    Name: <br />
+                    <input className='signUpInput' type="text" placeholder='Name' required
+                        onChange={(e) => setName(e.target.value)} />
+                </label>
+                <label>
+                    Email: <br />
+                    <input className='signUpInput' type="email" placeholder='Email' required
+                        onChange={(e) => setEmail(e.target.value)} />
+                </label>
+                <label>
+                    Password: <br />
+                    <input className='signUpInput' type="password" placeholder='Password' required
+                        onChange={(e) => setPsw(e.target.value)} />
+                </label>
+                <label>
+                    Phone Number: <br />
+                    <input className='signUpInput' type="number" placeholder='Phone number' required onChange={(e) => setPhone(e.target.value)} />
+                </label>
                 <select id="role" className='role' name="role" required value={role}
                     onChange={(e) => setRole(e.target.value)}>
                     <option value="" disabled>Select role</option>

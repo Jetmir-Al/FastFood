@@ -36,6 +36,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color: var(--color40);
+    box-shadow: var(--boxShadow);
 }
 
 .food img {
@@ -43,6 +44,7 @@
     height: 130px;
     background-color: var(--color90);
     border-radius: 10px;
+    object-fit: contain;
 }
 
 .addFoodItem {

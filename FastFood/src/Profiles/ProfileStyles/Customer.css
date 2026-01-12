@@ -20,6 +20,7 @@
     border-radius: 10px;
     margin-top: 50px;
     background-color: var(--color100);
+    box-shadow: var(--boxShadow);
 }
 
 .custmoreInfo-container button {

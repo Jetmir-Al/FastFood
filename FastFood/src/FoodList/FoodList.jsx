@@ -2,8 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import './foodList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faListCheck, faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
-import { UserContext } from "../UserContext/UserContext";
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { UserContext } from "../UserContext/Context";
 
 
 const FoodList = () => {

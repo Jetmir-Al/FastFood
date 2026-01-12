@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../../UserContext/UserContext";
+import { UserContext } from "../../UserContext/Context";
 import { useEffect } from "react";
 import './deliveryHisto.css';
 import axios from 'axios';

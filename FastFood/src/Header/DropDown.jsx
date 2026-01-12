@@ -1,11 +1,11 @@
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './dropDown.css';
-import { UserContext } from '../UserContext/UserContext';
+import { UserContext } from '../UserContext/Context';
 import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { DropDownContext } from '../UserContext/DropDownContext';
+import { DropDownContext } from '../UserContext/Context';
 
 export const DropDown = () => {
 

@@ -1,12 +1,15 @@
-import { useState, useEffect, createContext } from "react";
-
-//creating a context to call through the project
-export const UserContext = createContext();
+import { useState, useEffect, useContext } from "react";
+import { UserContext } from "./Context";
 
 //creating a userprovider "Provider" is needed 
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 
+    // const context = useContext(UserContext);
+
+    // if (!context) {
+    //     throw new Error("No context provided");
+    // }
 
     useEffect(() => {
         const userSaver = JSON.parse(localStorage.getItem('user'));

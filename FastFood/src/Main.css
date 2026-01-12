@@ -18,7 +18,8 @@
     --color100: hsl(31, 80%, 100%);
     --red: #e60000;
     --redHover: #c40000;
-    --boxShadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* --boxShadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    --boxShadow: 0 4px 12px var(--color10);
     --ff: "Noto Sans JP", serif;
     --ff2: "Fira Sans", serif;
     --ff3: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

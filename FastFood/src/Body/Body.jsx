@@ -3,7 +3,7 @@ import './Body.css';
 import NoAcc from './NoAcc';
 import BodyCustomer from './BodyCustomer';
 import BodyDelivery from './BodyDelivery';
-import { UserContext } from '../UserContext/UserContext';
+import { UserContext } from '../UserContext/Context';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import BodyAdmin from './BodyAdmin';

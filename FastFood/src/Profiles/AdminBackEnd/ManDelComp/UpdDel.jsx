@@ -63,8 +63,10 @@ const UpdDel = ({ delMan, cust, fName, orderTime, location, OrderID, DeliveryID 
                             ))
                     }
                 </select>
-                <input className='signUpInput' type="text" placeholder='New Address' required
-                    onChange={(e) => setAddress(e.target.value)} />
+                <label>
+                    <input className='signUpInput' type="text" placeholder='New Address' required
+                        onChange={(e) => setAddress(e.target.value)} />
+                </label>
                 <select className='role' name="role" required
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}>

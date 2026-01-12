@@ -17,7 +17,8 @@
     gap: 10px;
     width: 60%;
     background-color: var(--color100);
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--boxShadow);
 }
 
 .aboutHeader {
@@ -29,7 +30,7 @@
     background-color: var(--color30);
     color: var(--color100);
     border-radius: 12px 12px 0 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--boxShadow);
 }
 
 .section {

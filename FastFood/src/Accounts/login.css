@@ -10,24 +10,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 40%;
     height: 80%;
-    gap: 10px;
+    gap: 1rem;
     border-radius: 20px;
     background-color: var(--color50);
     box-shadow: var(--boxShadow);
 
 }
 
+.loginForm label,
+.role {
+    width: 60%;
+    font: var(--h4);
+}
+
 .loginForm input,
 .role {
-    padding: 10px;
-    width: 60%;
+    padding: 0.7rem 1rem;
     font: var(--p);
     border: none;
     border-bottom: 3px dashed var(--color10);
     outline: none;
+}
+
+.loginForm input {
+    width: 100%;
 }
 
 .displayBadinfo {
@@ -73,7 +82,7 @@
         width: 70%;
     }
 
-    .loginForm input,
+    .loginForm label,
     .role {
         width: 75%;
     }
@@ -86,7 +95,7 @@
         width: 90%;
     }
 
-    .loginForm input,
+    .loginForm label,
     .role {
         width: 85%;
     }

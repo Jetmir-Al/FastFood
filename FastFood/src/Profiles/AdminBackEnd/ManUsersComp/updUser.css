@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 70%;
+    width: 80%;
     background-color: var(--color50);
     padding: 1rem;
     border-radius: 0px 0px 15px 15px;
@@ -39,12 +39,19 @@
     gap: 10px;
 }
 
+.updateForm label {
+    width: 60%;
+}
 
 
 @media screen and (max-width: 768px) {
 
     .updateUserContainer {
         width: 90%;
+    }
+
+    .updateForm label {
+        width: 85%;
     }
 
 }

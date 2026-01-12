@@ -3,7 +3,7 @@ import './ProfileStyles/Customer.css';
 import CustomerInfo from './CustomerBackend/CustomerInfo.jsx';
 import OrderHistory from './CustomerBackend/OrderHistory.jsx';
 import ActiveOrder from './CustomerBackend/ActivOrder.jsx';
-import { DropDownContext } from '../UserContext/DropDownContext.jsx';
+import { DropDownContext } from '../UserContext/Context';
 
 export const Customer = () => {
     const { dropDownVal } = useContext(DropDownContext);

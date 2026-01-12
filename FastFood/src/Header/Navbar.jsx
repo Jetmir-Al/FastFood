@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import './Navbar.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { UserContext } from '../UserContext/UserContext';
+import { Link, useLocation } from 'react-router-dom';
+import { UserContext } from '../UserContext/Context';
 import { DropDown } from './DropDown';
 
 function Navbar() {

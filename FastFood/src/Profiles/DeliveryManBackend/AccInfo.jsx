@@ -2,7 +2,7 @@ import './Accinfo.css';
 import { useContext, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
-import { UserContext } from '../../UserContext/UserContext';
+import { UserContext } from '../../UserContext/Context';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

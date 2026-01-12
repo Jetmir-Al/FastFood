@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
-import { UserContext } from '../../UserContext/UserContext';
+import { UserContext } from '../../UserContext/Context';
 
 const CustomerInfo = () => {
 

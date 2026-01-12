@@ -1,7 +1,7 @@
 import './liveOrder.css';
 import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
-import { UserContext } from '../UserContext/UserContext';
+import { UserContext } from '../UserContext/Context';
 
 const LiveOrders = () => {
     const [order, setOrder] = useState([]);

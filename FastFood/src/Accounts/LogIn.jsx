@@ -3,8 +3,7 @@ import './login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import axios from 'axios';
-import { UserContext } from '../UserContext/UserContext';
-
+import { UserContext } from '../UserContext/Context';
 
 
 export const LogIn = () => {
@@ -45,10 +44,18 @@ export const LogIn = () => {
             <form className='loginForm' onSubmit={login}>
                 <h1>Login</h1>
                 <p id='diqka' className={badInfo ? null : 'displayBadInfo'}>Try a different email,password or role!</p>
-                <input type="email" placeholder='Email' required
-                    onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder='Password' required
-                    onChange={(e) => setPsw(e.target.value)} />
+                <label>
+                    Email: <br />
+                    <input type="email" placeholder='Email' required
+                        onChange={(e) => setEmail(e.target.value)} />
+                </label>
+                <label>
+                    Password: <br />
+
+                    <input type="password" placeholder='Password' required
+                        onChange={(e) => setPsw(e.target.value)} />
+                </label>
+
                 <select id="role" className='role' name="role" required value={role}
                     onChange={(e) => setRole(e.target.value)}>
                     <option value="" disabled>Select role</option>
