@@ -35,7 +35,6 @@ const FoodList = () => {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log("Diqka shkoj Mir");
             foodList();
             setDisplayMenu(true);
         } catch (error) {

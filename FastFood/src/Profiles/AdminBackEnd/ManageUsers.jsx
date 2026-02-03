@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faSpinner, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import './manageUsers.css';
 import axios from 'axios';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import AddUsers from './ManUsersComp/AddUsers';
 import UpdUsers from './ManUsersComp/UpdUsers';
-import { toggleManageUsers, toggleUpdateUsers } from '../../UserContext/AdminContext';
 
 
 const ManageUsers = () => {

@@ -11,7 +11,7 @@ export const LogIn = () => {
     let navigate = useNavigate();
     //to set the user we do that, if you just want to check
     // things do just user
-    const { setUser } = useContext(UserContext);
+    const { setUser, setAuthenticated } = useContext(UserContext);
 
     const [email, setEmail] = useState('');
     const [psw, setPsw] = useState('');
@@ -26,9 +26,8 @@ export const LogIn = () => {
             const response = await axios.post('http://localhost:8080/login', { email, psw, role });
             // console.log(response.data);
             const data = response.data;
-            const userInfoDB = data[0]; //first row from db
-            localStorage.setItem('user', JSON.stringify(userInfoDB))
-            setUser(userInfoDB);
+            setUser(data);
+            setAuthenticated(true)
             navigate('/');
 
         } catch (err) {

@@ -1,5 +1,6 @@
-import { Login, SignUp, deleteAccount } from "../database/database.js";
-
+import { Login, SignUp, Status, deleteAccount } from "../database/database.js";
+import { cookieConfig } from "../config/httpCookie.js";
+import { signToken, verifyToken } from "../utils/jwt.js";
 
 //signUp
 export const handleSignUp = async (req, res) => {
@@ -7,7 +8,6 @@ export const handleSignUp = async (req, res) => {
     // console.log(req.body)
     try {
         const signupInfo = await SignUp(name, email, psw, phone, role);
-        console.log("Signup happened well!")
         res.status(201).json(signupInfo);
     } catch (err) {
         console.log("Diqka shkoi keq:", err);
@@ -21,9 +21,10 @@ export const handleLogin = async (req, res) => {
     const { email, psw, role } = req.body
     try {
         const loginInfo = await Login(email, psw, role);
-        if (loginInfo.length > 0) {
-            console.log("User found;");
-            return res.json(loginInfo);
+        if (loginInfo) {
+            const token = signToken({ userID: loginInfo.userID });
+            res.cookie("access_token", token, cookieConfig)
+            res.status(200).json(loginInfo);
         }
         else {
             return res.status(404).json({ message: "No user" });
@@ -34,6 +35,28 @@ export const handleLogin = async (req, res) => {
         res.status(500).json({ message: "Login failed" });
     }
 }
+// status
+export const status = async (req, res) => {
+    try {
+        const token = req.cookies.access_token;
+        if (!token) {
+            return res.status(404).json({ message: "Cookie not found" });
+        }
+        const payload = verifyToken(token)
+        const user = await Status(payload.userID);
+        if (!user) {
+            return res.status(401).json({ message: "Invalid sesion" });
+        }
+
+        return res.status(200).json({
+            authenticated: true,
+            user
+        })
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // delete account
 export const handleDeleteAcc = async (req, res) => {

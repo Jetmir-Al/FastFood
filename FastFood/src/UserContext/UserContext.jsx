@@ -1,9 +1,11 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { UserContext } from "./Context";
+import axios from "axios";
 
 //creating a userprovider "Provider" is needed 
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [authenticated, setAuthenticated] = useState(false);
 
     // const context = useContext(UserContext);
 
@@ -12,15 +14,19 @@ export const UserProvider = ({ children }) => {
     // }
 
     useEffect(() => {
-        const userSaver = JSON.parse(localStorage.getItem('user'));
-        if (userSaver) {
-            setUser(userSaver);
+        const getUser = async () => {
+            const userSaver = await axios.get("http://localhost:8080/status");
+            if (userSaver) {
+                setUser(userSaver.data.user);
+                setAuthenticated(userSaver.data.authenticated);
+            }
         }
+        getUser();
     }, []);
     //givint the values to the children which is the entire app in 
     // main.jsx
     return (
-        <UserContext.Provider value={{ user, setUser }}>
+        <UserContext.Provider value={{ user, setUser, authenticated, setAuthenticated }}>
             {children}
         </UserContext.Provider>
     );

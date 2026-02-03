@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import ImgRoutes from './routes/ImgRoutes.js';
 import AuthRoutes from './routes/AuthRoutes.js';
 import UpdateRoutes from './routes/UpdateRoutes.js'
@@ -16,6 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(json());
 app.use(express.static('public'));
+app.use(cookieParser());
 
 
 app.use('/', AuthRoutes);

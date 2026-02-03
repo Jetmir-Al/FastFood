@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import './manageDel.css';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faSpinner, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
-import { toggleUpdateDelivery } from '../../UserContext/AdminContext';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import UpdDel from './ManDelComp/UpdDel';
 
 
