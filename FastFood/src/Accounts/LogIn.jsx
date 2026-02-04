@@ -70,6 +70,8 @@ export const LogIn = () => {
                             Cancel
                         </button>
                     </Link>
+
+
                 </div>
 
             </form>

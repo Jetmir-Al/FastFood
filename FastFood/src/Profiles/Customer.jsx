@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import './ProfileStyles/Customer.css';
 import CustomerInfo from './CustomerBackend/CustomerInfo.jsx';
 import OrderHistory from './CustomerBackend/OrderHistory.jsx';

@@ -15,10 +15,17 @@ export const UserProvider = ({ children }) => {
 
     useEffect(() => {
         const getUser = async () => {
-            const userSaver = await axios.get("http://localhost:8080/status");
-            if (userSaver) {
-                setUser(userSaver.data.user);
-                setAuthenticated(userSaver.data.authenticated);
+
+            try {
+
+                const userSaver = await axios.get('http://localhost:8080/status', { withCredentials: true });
+                console.log(userSaver);
+                if (userSaver) {
+                    setUser(userSaver.data.user);
+                    setAuthenticated(userSaver.data.authenticated);
+                }
+            } catch (error) {
+                console.log(error);
             }
         }
         getUser();

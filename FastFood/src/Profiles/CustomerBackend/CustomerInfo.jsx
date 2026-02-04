@@ -3,10 +3,12 @@ import { faEnvelope, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { UserContext } from '../../UserContext/Context';
+import axios from 'axios';
 
 const CustomerInfo = () => {
 
     const [updatePsw, setUpdatePsw] = useState(false);
+    const [newPsw, setNewPsw] = useState("");
     const { user, setUser } = useContext(UserContext);
     const upperCaseRole = user.role.toUpperCase();
     const navigate = useNavigate()
@@ -15,7 +17,7 @@ const CustomerInfo = () => {
         event.preventDefault();
         const userID = user.userID;
         try {
-            const res = await axios.put('http://localhost:8080/update/updatePsw', { psw, userID })
+            const res = await axios.put('http://localhost:8080/update/updatePsw', { newPsw, userID })
             const { passwordHash } = res.data;
             setUser(c => ({ ...c, passwordHash }));
 
@@ -27,11 +29,10 @@ const CustomerInfo = () => {
             }
         }
     }
-    function logOut() {
-        localStorage.removeItem('user');
+    async function logOut() {
+        await axios.post("http://localhost:8080/logout", {}, { withCredentials: true });
         setUser(null);
         navigate('/');
-        console.log("User loged out");
     }
 
     const deleteAcc = async () => {

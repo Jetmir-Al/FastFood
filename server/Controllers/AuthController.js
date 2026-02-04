@@ -39,19 +39,39 @@ export const handleLogin = async (req, res) => {
 export const status = async (req, res) => {
     try {
         const token = req.cookies.access_token;
+        console.log(token);
         if (!token) {
             return res.status(404).json({ message: "Cookie not found" });
         }
         const payload = verifyToken(token)
+        console.log(payload.userID);
+
         const user = await Status(payload.userID);
         if (!user) {
             return res.status(401).json({ message: "Invalid sesion" });
         }
-
         return res.status(200).json({
             authenticated: true,
             user
         })
+
+
+    } catch (err) {
+        return res.status(500).json({ message: "Server error" });
+    }
+}
+
+export const logout = async (req, res) => {
+    try {
+        const { httpOnly, sameSite } = cookieConfig;
+
+        const token = req.cookies.access_token;
+        console.log(token);
+        if (!token) {
+            return res.status(404).json({ message: "Cookie not found" });
+        }
+        res.clearCookie('access_token', { httpOnly, sameSite });
+        res.status(200).json({ message: "Loged out" });
     } catch (err) {
         console.log(err);
     }

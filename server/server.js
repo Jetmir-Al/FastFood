@@ -13,6 +13,7 @@ const app = express();
 // get requests from front end
 const corsOptions = {
     origin: [process.env.CLIENT_PORT],
+    credentials: true,
 };
 app.use(cors(corsOptions));
 app.use(json());
