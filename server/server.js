@@ -1,3 +1,5 @@
+// import dotenv from "dotenv";
+// dotenv.config();
 import express, { json } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -12,22 +14,22 @@ import UserRoutes from './routes/UserRoutes.js';
 const app = express();
 // get requests from front end
 const corsOptions = {
-    origin: [process.env.CLIENT_PORT],
+    origin: process.env.CLIENT_PORT,
     credentials: true,
 };
 app.use(cors(corsOptions));
 app.use(json());
-app.use(express.static('public'));
 app.use(cookieParser());
+app.use(express.static('public'));
 
 
-app.use('/', AuthRoutes);
-app.use('/update', UpdateRoutes);
-app.use('/delivery', DeliveryRoutes);
-app.use('/', ImgRoutes);
-app.use('/food', FoodRoutes);
-app.use('/orders', OrderRoutes);
-app.use('/user', UserRoutes);
+app.use('/api/auth', AuthRoutes);
+app.use('/api/update', UpdateRoutes);
+app.use('/api/delivery', DeliveryRoutes);
+app.use('/api/img', ImgRoutes);
+app.use('/api/food', FoodRoutes);
+app.use('/api/orders', OrderRoutes);
+app.use('/api/user', UserRoutes);
 
 
 

@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
 import './noAcc.css';
+import { getFoods } from "../api/imgApi";
 
 const NoAcc = () => {
     const [food, setFood] = useState([]);
 
     const foodList = async () => {
         try {
-            const foods = await axios.get('http://localhost:8080/food/foodList')
-            setFood(foods.data);
+            const foods = await getFoods();
+            console.log(foods);
+            setFood(foods);
 
         } catch (err) {
             console.log("Diqka shkoj keq: ", err);
@@ -31,7 +32,7 @@ const NoAcc = () => {
                 <div className="img-container ">
                     <img src={`http://localhost:8080/images/cheeseBurger_1750699365178.png`} alt="hamburger Img" />
                     {
-                        food.length > 0 && <div className="Img-info">
+                        food !== undefined && <div className="Img-info">
                             <h3>{food[0].foodName}</h3>
                             <p>{food[0].foodDesc}</p>
                         </div>

@@ -38,6 +38,7 @@ export const handleLogin = async (req, res) => {
 // status
 export const status = async (req, res) => {
     try {
+        console.log("ALL COOKIES:", req.cookies);
         const token = req.cookies.access_token;
         console.log(token);
         if (!token) {
